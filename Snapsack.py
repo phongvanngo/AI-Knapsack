@@ -50,8 +50,8 @@ class TestCase:
         l1 = "/n{:05d}/".format(N)
         l2 = "R{:05d}/".format(R)
         l3 = "S{:03d}.kp".format(S)
-        self.path = "Test Cases/"+Type+l1+l2+l3
-        self.pathOutput = "Result/"+Type+l1+l2+l3
+        self.path = os.getcwd()+"/Test Cases/"+Type+l1+l2+l3
+        self.pathOutput = os.getcwd()+"/Result/"+Type+l1+l2+l3
         self.pathStatistic = "Statistic/"+Type+".txt"
         with open(self.path) as level_file:
             rows = level_file.read().split('\n')
