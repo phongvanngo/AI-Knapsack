@@ -155,7 +155,7 @@ def main():
         "12Circle",
     ]
 
-    typeIndex = 4
+    typeIndex = 7
     while typeIndex < len(listType):
         type = listType[typeIndex]
         typeIndex += 1
@@ -164,6 +164,7 @@ def main():
         Utils.writeStringToFile(
             filename=pathStatistic, string="Type\tN\tR\tCapacities\tTotal Weight\tComputed Value\tTime Consuming\n")
 
+        print(pathStatistic);
         for n in listN:
             for r in listR:
                 for s in range(5):
