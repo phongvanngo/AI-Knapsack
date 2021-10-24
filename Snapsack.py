@@ -171,7 +171,7 @@ def main():
         print(pathStatistic)
         for n in listN:
             for r in listR:
-                for s in range(5):
+                for s in range(1):
                     solveProblem(type, n, r, s)
                 Utils.writeStringToFile(
                     filename=pathStatistic, string="\n")
