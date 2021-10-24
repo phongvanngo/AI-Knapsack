@@ -59,12 +59,16 @@ class TestCase:
             self.N = rows[1]
             self.capacities = rows[2]
             index = 3
+            self.values = []
+            self.weights[0] = []
             while (index < len(rows)):
                 if(rows[index] != ""):
                     item_infor = rows[index].split(" ")
                     self.values.append(int(item_infor[0]))
                     self.weights[0].append(int(item_infor[1]))
                 index = index+1
+        # print(self.values);
+        # print(self.weights);
 
     def output(self, computed_value, total_weight, packed_items, packed_weights, time_consuming):
         Utils.initFile(self.pathOutput)
@@ -155,20 +159,24 @@ def main():
         "12Circle",
     ]
 
-    typeIndex = 7
+    typeIndex = int(input("please input:"))
     while typeIndex < len(listType):
-        type = listType[typeIndex]
+        type = listType[int(typeIndex)]
         typeIndex += 1
         pathStatistic = "Statistic/"+type+".txt"
         Utils.initFile(pathStatistic)
         Utils.writeStringToFile(
             filename=pathStatistic, string="Type\tN\tR\tCapacities\tTotal Weight\tComputed Value\tTime Consuming\n")
 
-        print(pathStatistic);
+        print(pathStatistic)
         for n in listN:
             for r in listR:
                 for s in range(5):
                     solveProblem(type, n, r, s)
+                Utils.writeStringToFile(
+                    filename=pathStatistic, string="\n")
+                # break;
+            # break;
 
     solveProblem("04AlmostStronglyCorrelated", 50, 10000, 0)
 

@@ -1,0 +1,5 @@
+Type	N	R	Capacities	Total Weight	Computed Value	Time Consuming
+09SpannerStronglyCorrelated	50	1000	11546	11540	28440	180.0598349571228	
+09SpannerStronglyCorrelated	50	1000	6514	6512	28112	180.07983207702637	
+09SpannerStronglyCorrelated	50	1000	13313	13313	44913	180.0743408203125	
+09SpannerStronglyCorrelated	50	1000	5353	5327	36727	0.03125429153442383	
