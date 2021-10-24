@@ -119,7 +119,7 @@ def solveProblem(Type, N, R, S):
     solver = pywrapknapsack_solver.KnapsackSolver(
         pywrapknapsack_solver.KnapsackSolver.
         KNAPSACK_MULTIDIMENSION_BRANCH_AND_BOUND_SOLVER, 'KnapsackExample')
-    solver.set_time_limit(180)
+    solver.set_time_limit(60)
     solver.Init(values, weights, capacities)
     print("start")
     computed_value = solver.Solve()
